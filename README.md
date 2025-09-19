@@ -11,7 +11,6 @@ Este script gera automaticamente um **documento Word (.docx)** com a **Política
 - Matriz de Funções RBAC  
 - Matriz de Segregação de Funções (SoD)  
 - Salvaguardas adicionais  
-
 ---
 
 ## Requisitos
@@ -19,3 +18,16 @@ Este script gera automaticamente um **documento Word (.docx)** com a **Política
 - Biblioteca **python-docx**  
 ```bash
 pip install python-docx
+```
+## Como Usar
+1. Guardar o script Python
+* Copia o código do script (hyrbac.py) para a tua máquina.
+2. Executar o script
+* No terminal ou prompt de comando:
+```bash
+python3 hyrbac.py
+```
+3. Abrir o ficheiro Word
+* O script irá criar: Politica_IAM_AD_Hibrido.docx na mesma pasta.
+
+No terminal ou prompt de comando:
