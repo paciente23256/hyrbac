@@ -28,6 +28,6 @@ pip install python-docx
 python3 hyrbac.py
 ```
 3. Abrir o ficheiro Word
-* O script irá criar: Politica_IAM_AD_Hibrido.docx na mesma pasta.
+* O script irá criar um ficheiro: Politica_IAM_AD_Hibrido.docx na mesma pasta.
 
 No terminal ou prompt de comando:
