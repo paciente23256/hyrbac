@@ -20,8 +20,7 @@ Este script gera automaticamente um **documento Word (.docx)** com a **Política
 pip install python-docx
 ```
 ## Como Usar
-1. Guardar o script Python
-* Copia o código do script (hyrbac.py) para a tua máquina.
+1. Edite o ficheiro politica.json com os conteúdos desejados.
 2. Executar o script
 * No terminal ou prompt de comando:
 ```bash
