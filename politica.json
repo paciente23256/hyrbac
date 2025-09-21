@@ -1,0 +1,56 @@
+{
+"capa": {
+"titulo": "Política de Gestão de Identidades e Acessos (IAM)",
+"subtitulo": "Ambiente Híbrido Microsoft AD",
+"data": "2025-09-21",
+"versao": "1.0",
+"responsavel": "Equipa de Segurança"
+},
+"objetivos": [
+"Garantir o princípio do menor privilégio em ambientes híbridos (AD On-Premises + Azure AD + Microsoft 365).",
+"Padronizar o controlo de acesso baseado em funções (RBAC).",
+"Assegurar segregação de funções (SoD) para reduzir riscos internos.",
+"Implementar auditoria e monitorização em conformidade com normas (SOX, ISO 27001, RGPD, etc.)."
+],
+"principios": [
+"Menor privilégio – cada utilizador tem apenas os acessos mínimos necessários.",
+"Acesso baseado em função (RBAC) – permissões atribuídas a funções, nunca diretamente a indivíduos.",
+"Segregação de funções (SoD) – impedir que uma única função tenha controlo total.",
+"Acesso condicional – MFA, conformidade de dispositivo e restrições geográficas obrigatórias para funções privilegiadas.",
+"Acesso Just-in-Time (JIT) – ativação temporária de privilégios via Azure AD PIM.",
+"Auditoria contínua – todos os acessos administrativos devem ser registados e revistos periodicamente."
+],
+"roles": [
+{
+"funcao": "Administrador Global (Azure AD)",
+"ambito": "Tenant Azure AD, M365",
+"permissoes": "Controlo total (serviços, subscrições, faturação)",
+"perfil": "2–4 admins séniores de identidade",
+"notas": "Conta ‘break-glass’ com MFA obrigatório e uso apenas emergencial"
+},
+{
+"funcao": "Administrador de Segurança",
+"ambito": "Azure AD, M365",
+"permissoes": "Definir políticas e responder a alertas",
+"perfil": "SecOps / SOC",
+"notas": "Trabalha com equipa de cibersegurança"
+}
+],
+"sod": [
+{
+"funcoes": "Administrador Global + Administrador de Segurança",
+"motivo": "Impede ocultação de atividades maliciosas"
+},
+{
+"funcoes": "Administrador de AD + Administrador de Auditoria",
+"motivo": "Impede manipulação de registos"
+}
+],
+"salvaguardas": [
+"Uso obrigatório de PAW (Privileged Access Workstations) para todas as contas privilegiadas.",
+"MFA + Acesso Condicional aplicado a todas as funções administrativas.",
+"Monitorização contínua via Defender for Identity e Azure AD Identity Protection.",
+"Implementação de JEA (Just Enough Administration) em AD On-Premises.",
+"Revisões trimestrais de acessos com Azure AD Access Reviews."
+]
+}
